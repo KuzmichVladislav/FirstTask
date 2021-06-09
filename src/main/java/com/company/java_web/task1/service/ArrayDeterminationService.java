@@ -2,42 +2,13 @@ package com.company.java_web.task1.service;
 
 import com.company.java_web.task1.entity.CustomArray;
 
-public class ArrayDeterminationService {
+public interface ArrayDeterminationService {
 
-    public static int determinationAmount(CustomArray array) {
-        int[] tempArray = array.getArray();
-        int sum = 0;
-        for (int i : tempArray) {
-            sum += i;
-        }
-        return sum;
-    }
+    int determinationAmount(CustomArray array);
 
-    public double determinationAverage(CustomArray array) {
-        int[] tempArray = array.getArray();
-        double average = determinationAmount(array) / (double) tempArray.length;
-        return average;
-    }
+    double determinationAverage(CustomArray array);
 
-    public int determinationPositive(CustomArray array) {
-        int[] tempArray = array.getArray();
-        int positive = 0;
-        for (int i : tempArray) {
-            if (i > 0) {
-                ++positive;
-            }
-        }
-        return positive;
-    }
+    int determinationPositive(CustomArray array);
 
-    public int determinationNegative(CustomArray array) {
-        int[] tempArray = array.getArray();
-        int negative = 0;
-        for (int i : tempArray) {
-            if (i < 0) {
-                ++negative;
-            }
-        }
-        return negative;
-    }
+    int determinationNegative(CustomArray array);
 }

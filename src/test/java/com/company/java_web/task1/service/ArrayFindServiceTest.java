@@ -4,18 +4,19 @@ import com.company.java_web.task1.entity.CustomArray;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class ArrayAnalysisServiceTest {
+public class ArrayFindServiceTest {
 
     int[] testArray = new int[]{1, 3, 5, -4};
     CustomArray testClass = new CustomArray(testArray);
 
-    public ArrayAnalysisServiceTest() {
+    public ArrayFindServiceTest() {
     }
 
     @org.junit.Test
     public void testFindMin() {
         System.out.println("findMin");
-        ArrayAnalysisService instance = new ArrayAnalysisService();
+        ArrayFindServiceImpl instance = new ArrayFindServiceImpl() {
+        };
         int expResult = -4;
         int result = instance.findMin(testClass);
         assertEquals(expResult, result);
@@ -24,7 +25,7 @@ public class ArrayAnalysisServiceTest {
     @org.junit.Test
     public void testFindMax() {
         System.out.println("findMax");
-        ArrayAnalysisService instance = new ArrayAnalysisService();
+        ArrayFindServiceImpl instance = new ArrayFindServiceImpl();
         int expResult = 5;
         int result = instance.findMax(testClass);
         assertEquals(expResult, result);

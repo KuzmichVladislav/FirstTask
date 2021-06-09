@@ -15,15 +15,16 @@ public class ArrayDeterminationServiceTest {
     @Test
     public void testDeterminationAmount() {
         System.out.println("determinationAmount");
+        ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 5;
-        int result = ArrayDeterminationService.determinationAmount(testClass);
+        int result = instance.determinationAmount(testClass);
         assertEquals(expResult, result);
     }
 
     @Test
     public void testDeterminationAverage() {
         System.out.println("determinationAverage");
-        ArrayDeterminationService instance = new ArrayDeterminationService();
+        ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         double expResult = 1.25;
         double result = instance.determinationAverage(testClass);
         assertEquals(expResult, result, 0.001);
@@ -32,7 +33,7 @@ public class ArrayDeterminationServiceTest {
     @Test
     public void testDeterminationPositive() {
         System.out.println("determinationPositive");
-        ArrayDeterminationService instance = new ArrayDeterminationService();
+        ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 3;
         int result = instance.determinationPositive(testClass);
         assertEquals(expResult, result);
@@ -41,7 +42,7 @@ public class ArrayDeterminationServiceTest {
     @Test
     public void testDeterminationNegative() {
         System.out.println("determinationNegative");
-        ArrayDeterminationService instance = new ArrayDeterminationService();
+        ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 1;
         int result = instance.determinationNegative(testClass);
         assertEquals(expResult, result);
