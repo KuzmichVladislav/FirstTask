@@ -44,9 +44,6 @@ public class CustomArray {
             return false;
         }
         final CustomArray other = (CustomArray) obj;
-        if (!Arrays.equals(this.array, other.array)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(this.array, other.array);
     }
 }

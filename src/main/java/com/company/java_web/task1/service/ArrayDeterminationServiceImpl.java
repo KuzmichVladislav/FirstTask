@@ -15,8 +15,7 @@ public class ArrayDeterminationServiceImpl implements ArrayDeterminationService 
 
     public double determinationAverage(CustomArray array) {
         int[] tempArray = array.getArray();
-        double average = determinationAmount(array) / (double) tempArray.length;
-        return average;
+        return determinationAmount(array) / (double) tempArray.length;
     }
 
     public int determinationPositive(CustomArray array) {

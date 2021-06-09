@@ -1,8 +1,8 @@
 package com.company.java_web.task1.service;
 
 import com.company.java_web.task1.entity.CustomArray;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class ArrayFindServiceTest {
 
