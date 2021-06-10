@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ArrayDeterminationServiceTest {
 
-    final static Logger logger = Logger.getLogger(ArrayDeterminationServiceImpl.class);
+    final static Logger logger = Logger.getLogger(ArrayDeterminationServiceTest.class);
 
     int[] testArray = new int[]{1, 3, 5, -4};
     CustomArray testClass = new CustomArray(testArray);

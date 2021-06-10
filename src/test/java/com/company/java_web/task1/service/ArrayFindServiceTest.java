@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ArrayFindServiceTest {
 
-    final static Logger logger = Logger.getLogger(ArrayExceptionServiceTest.class);
+    final static Logger logger = Logger.getLogger(ArrayFindServiceTest.class);
 
     int[] testArray = new int[]{1, 3, 5, -4};
     CustomArray testClass = new CustomArray(testArray);
