@@ -1,4 +1,4 @@
-package com.company.java_web.task1.Exception;
+package com.company.java_web.task1.exception;
 
 public class ArrayException extends Exception {
 
