@@ -1,22 +1,19 @@
-package com.company.java_web.task1.service;
+package com.company.task1;
 
-import com.company.java_web.task1.entity.CustomArray;
-import com.company.java_web.task1.exception.ArrayException;
-import org.apache.log4j.Logger;
+import com.company.task1.entity.CustomArray;
+import com.company.task1.exception.ArrayException;
+import com.company.task1.service.impl.ArrayReplacementServiceImpl;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
 public class ArrayReplacementServiceTest {
 
-    final static Logger arrayLogger = Logger.getLogger(ArrayReplacementServiceTest.class);
-
     int[] testArray = new int[]{0, 3, 5, -4, 0, 14, 0};
     CustomArray testClass = new CustomArray(testArray);
 
     @Test
     public void testReplacementZero() throws ArrayException {
-        arrayLogger.info("replacementZero test");
         ArrayReplacementServiceImpl instance = new ArrayReplacementServiceImpl();
         int[] expResult = new int[]{-1, 3, 5, -4, -1, 14, -1};
         instance.replacementZero(testClass);

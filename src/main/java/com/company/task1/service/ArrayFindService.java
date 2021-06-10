@@ -1,7 +1,7 @@
-package com.company.java_web.task1.service;
+package com.company.task1.service;
 
-import com.company.java_web.task1.exception.ArrayException;
-import com.company.java_web.task1.entity.CustomArray;
+import com.company.task1.exception.ArrayException;
+import com.company.task1.entity.CustomArray;
 
 public interface ArrayFindService {
 

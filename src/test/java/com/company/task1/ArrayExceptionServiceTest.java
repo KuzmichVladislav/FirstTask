@@ -1,20 +1,14 @@
-package com.company.java_web.task1.service;
+package com.company.task1;
 
-import com.company.java_web.task1.entity.CustomArray;
-import com.company.java_web.task1.exception.ArrayException;
-import org.apache.log4j.Logger;
+import com.company.task1.entity.CustomArray;
+import com.company.task1.exception.ArrayException;
+import com.company.task1.service.impl.ArrayReplacementServiceImpl;
 import org.junit.Test;
 
 public class ArrayExceptionServiceTest {
 
-    final static Logger arrayLogger = Logger.getLogger(ArrayExceptionServiceTest.class);
-
-    public ArrayExceptionServiceTest() {
-    }
-
     @Test(expected = Exception.class)
     public void testArrayException() throws ArrayException {
-        arrayLogger.info("ArrayException test");
         int[] testArray = new int[-1];
         CustomArray testClass = new CustomArray(testArray);
         ArrayReplacementServiceImpl instance = new ArrayReplacementServiceImpl();
