@@ -6,6 +6,10 @@ public class CustomArray {
 
     private int[] array;
 
+    public boolean isInvalid() {
+        return this.array.length < 0 || this.array == null ? true : false;
+    }
+
     public CustomArray(int[] array) {
         this.array = array;
     }

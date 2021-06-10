@@ -1,5 +1,6 @@
 package com.company.java_web.task1.service;
 
+import com.company.java_web.task1.Exception.ArrayException;
 import com.company.java_web.task1.entity.CustomArray;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class ArrayReplacementServiceTest {
     CustomArray testClass = new CustomArray(testArray);
 
     @Test
-    public void testReplacementZero() {
+    public void testReplacementZero() throws ArrayException {
         System.out.println("replacementZero");
         ArrayReplacementServiceImpl instance = new ArrayReplacementServiceImpl();
         int[] expResult = new int[]{-1, 3, 5, -4, -1, 14, -1};

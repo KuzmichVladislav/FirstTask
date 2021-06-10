@@ -1,5 +1,6 @@
 package com.company.java_web.task1.service;
 
+import com.company.java_web.task1.Exception.ArrayException;
 import com.company.java_web.task1.entity.CustomArray;
 import org.junit.Test;
 
@@ -14,7 +15,7 @@ public class ArrayDeterminationServiceTest {
     }
 
     @Test
-    public void testDeterminationAmount() {
+    public void testDeterminationAmount() throws ArrayException {
         System.out.println("determinationAmount");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 5;
@@ -23,7 +24,7 @@ public class ArrayDeterminationServiceTest {
     }
 
     @Test
-    public void testDeterminationAverage() {
+    public void testDeterminationAverage() throws ArrayException {
         System.out.println("determinationAverage");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         double expResult = 1.25;
@@ -32,7 +33,7 @@ public class ArrayDeterminationServiceTest {
     }
 
     @Test
-    public void testDeterminationPositive() {
+    public void testDeterminationPositive() throws ArrayException {
         System.out.println("determinationPositive");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 3;
@@ -41,7 +42,7 @@ public class ArrayDeterminationServiceTest {
     }
 
     @Test
-    public void testDeterminationNegative() {
+    public void testDeterminationNegative() throws ArrayException {
         System.out.println("determinationNegative");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 1;

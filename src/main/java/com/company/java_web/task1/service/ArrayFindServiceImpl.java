@@ -1,10 +1,15 @@
 package com.company.java_web.task1.service;
 
+import com.company.java_web.task1.Exception.ArrayException;
 import com.company.java_web.task1.entity.CustomArray;
 
 public class ArrayFindServiceImpl implements ArrayFindService {
 
-    public int findMin(CustomArray array) {
+    @Override
+    public int findMin(CustomArray array) throws ArrayException {
+        if (array.isInvalid()) {
+            throw new ArrayException("invalid array");
+        }
         int[] tempArray = array.getArray();
         int min = tempArray[0];
         for (int i : tempArray) {
@@ -15,7 +20,11 @@ public class ArrayFindServiceImpl implements ArrayFindService {
         return min;
     }
 
-    public int findMax(CustomArray array) {
+    @Override
+    public int findMax(CustomArray array) throws ArrayException {
+        if (array.isInvalid()) {
+            throw new ArrayException("invalid array");
+        }
         int[] tempArray = array.getArray();
         int max = tempArray[0];
         for (int i : tempArray) {

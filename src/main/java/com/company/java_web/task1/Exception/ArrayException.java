@@ -1,6 +1,7 @@
 package com.company.java_web.task1.Exception;
 
-public class ArrayException extends Exception{
+public class ArrayException extends Exception {
+
     public ArrayException() {
     }
 
