@@ -1,12 +1,15 @@
 package com.company.java_web.task1.service;
 
-import com.company.java_web.task1.exception.ArrayException;
 import com.company.java_web.task1.entity.CustomArray;
+import com.company.java_web.task1.exception.ArrayException;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class ArrayDeterminationServiceTest {
+
+    final static Logger logger = Logger.getLogger(ArrayDeterminationServiceImpl.class);
 
     int[] testArray = new int[]{1, 3, 5, -4};
     CustomArray testClass = new CustomArray(testArray);
@@ -16,7 +19,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationAmount() throws ArrayException {
-        System.out.println("determinationAmount");
+        logger.info("determinationAmount test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 5;
         int result = instance.determinationAmount(testClass);
@@ -25,7 +28,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationAverage() throws ArrayException {
-        System.out.println("determinationAverage");
+        logger.info("determinationAverage test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         double expResult = 1.25;
         double result = instance.determinationAverage(testClass);
@@ -34,7 +37,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationPositive() throws ArrayException {
-        System.out.println("determinationPositive");
+        logger.info("determinationPositive test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 3;
         int result = instance.determinationPositive(testClass);
@@ -43,7 +46,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationNegative() throws ArrayException {
-        System.out.println("determinationNegative");
+        logger.info("determinationNegative test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 1;
         int result = instance.determinationNegative(testClass);

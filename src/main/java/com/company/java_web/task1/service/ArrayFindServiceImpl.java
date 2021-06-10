@@ -1,14 +1,18 @@
 package com.company.java_web.task1.service;
 
-import com.company.java_web.task1.exception.ArrayException;
 import com.company.java_web.task1.entity.CustomArray;
+import com.company.java_web.task1.exception.ArrayException;
+import org.apache.log4j.Logger;
 
 public class ArrayFindServiceImpl implements ArrayFindService {
+
+    final static Logger logger = Logger.getLogger(ArrayFindServiceImpl.class);
 
     @Override
     public int findMin(CustomArray array) throws ArrayException {
         if (array.isInvalid()) {
-            throw new ArrayException("invalid array");
+            logger.error("invalid array");
+            throw new ArrayException();
         }
         int[] tempArray = array.getArray();
         int min = tempArray[0];
@@ -23,7 +27,8 @@ public class ArrayFindServiceImpl implements ArrayFindService {
     @Override
     public int findMax(CustomArray array) throws ArrayException {
         if (array.isInvalid()) {
-            throw new ArrayException("invalid array");
+            logger.error("invalid array");
+            throw new ArrayException();
         }
         int[] tempArray = array.getArray();
         int max = tempArray[0];
