@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ArrayFindServiceTest {
 
-    final static Logger logger = Logger.getLogger(ArrayFindServiceTest.class);
+    final static Logger arrayLogger = Logger.getLogger(ArrayFindServiceTest.class);
 
     int[] testArray = new int[]{1, 3, 5, -4};
     CustomArray testClass = new CustomArray(testArray);
@@ -18,7 +18,7 @@ public class ArrayFindServiceTest {
 
     @org.junit.Test
     public void testFindMin() throws ArrayException {
-        logger.info("findMin test");
+        arrayLogger.info("findMin test");
         ArrayFindServiceImpl instance = new ArrayFindServiceImpl() {
         };
         int expResult = -4;
@@ -28,7 +28,7 @@ public class ArrayFindServiceTest {
 
     @org.junit.Test
     public void testFindMax() throws ArrayException {
-        logger.info("findMax test");
+        arrayLogger.info("findMax test");
         ArrayFindServiceImpl instance = new ArrayFindServiceImpl();
         int expResult = 5;
         int result = instance.findMax(testClass);

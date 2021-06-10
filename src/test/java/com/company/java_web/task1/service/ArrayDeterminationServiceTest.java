@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ArrayDeterminationServiceTest {
 
-    final static Logger logger = Logger.getLogger(ArrayDeterminationServiceTest.class);
+    final static Logger arrayLogger = Logger.getLogger(ArrayDeterminationServiceTest.class);
 
     int[] testArray = new int[]{1, 3, 5, -4};
     CustomArray testClass = new CustomArray(testArray);
@@ -19,7 +19,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationAmount() throws ArrayException {
-        logger.info("determinationAmount test");
+        arrayLogger.info("determinationAmount test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 5;
         int result = instance.determinationAmount(testClass);
@@ -28,7 +28,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationAverage() throws ArrayException {
-        logger.info("determinationAverage test");
+        arrayLogger.info("determinationAverage test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         double expResult = 1.25;
         double result = instance.determinationAverage(testClass);
@@ -37,7 +37,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationPositive() throws ArrayException {
-        logger.info("determinationPositive test");
+        arrayLogger.info("determinationPositive test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 3;
         int result = instance.determinationPositive(testClass);
@@ -46,7 +46,7 @@ public class ArrayDeterminationServiceTest {
 
     @Test
     public void testDeterminationNegative() throws ArrayException {
-        logger.info("determinationNegative test");
+        arrayLogger.info("determinationNegative test");
         ArrayDeterminationServiceImpl instance = new ArrayDeterminationServiceImpl();
         int expResult = 1;
         int result = instance.determinationNegative(testClass);

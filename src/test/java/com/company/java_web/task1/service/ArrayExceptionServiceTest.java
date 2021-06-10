@@ -7,14 +7,14 @@ import org.junit.Test;
 
 public class ArrayExceptionServiceTest {
 
-    final static Logger logger = Logger.getLogger(ArrayExceptionServiceTest.class);
+    final static Logger arrayLogger = Logger.getLogger(ArrayExceptionServiceTest.class);
 
     public ArrayExceptionServiceTest() {
     }
 
     @Test(expected = Exception.class)
     public void testArrayException() throws ArrayException {
-        logger.info("ArrayException test");
+        arrayLogger.info("ArrayException test");
         int[] testArray = new int[-1];
         CustomArray testClass = new CustomArray(testArray);
         ArrayReplacementServiceImpl instance = new ArrayReplacementServiceImpl();

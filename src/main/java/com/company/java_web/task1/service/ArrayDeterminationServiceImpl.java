@@ -6,12 +6,12 @@ import org.apache.log4j.Logger;
 
 public class ArrayDeterminationServiceImpl implements ArrayDeterminationService {
 
-    final static Logger logger = Logger.getLogger(ArrayDeterminationServiceImpl.class);
+    final static Logger arrayLogger = Logger.getLogger(ArrayDeterminationServiceImpl.class);
 
     @Override
     public int determinationAmount(CustomArray array) throws ArrayException {
         if (array.isInvalid()) {
-            logger.error("invalid array");
+            arrayLogger.error("invalid array");
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -31,7 +31,7 @@ public class ArrayDeterminationServiceImpl implements ArrayDeterminationService 
     @Override
     public int determinationPositive(CustomArray array) throws ArrayException {
         if (array.isInvalid()) {
-            logger.error("invalid array");
+            arrayLogger.error("invalid array");
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -47,7 +47,7 @@ public class ArrayDeterminationServiceImpl implements ArrayDeterminationService 
     @Override
     public int determinationNegative(CustomArray array) throws ArrayException {
         if (array.isInvalid()) {
-            logger.error("invalid array");
+            arrayLogger.error("invalid array");
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();

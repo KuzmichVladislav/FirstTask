@@ -9,14 +9,14 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class ArrayReplacementServiceTest {
 
-    final static Logger logger = Logger.getLogger(ArrayReplacementServiceTest.class);
+    final static Logger arrayLogger = Logger.getLogger(ArrayReplacementServiceTest.class);
 
     int[] testArray = new int[]{0, 3, 5, -4, 0, 14, 0};
     CustomArray testClass = new CustomArray(testArray);
 
     @Test
     public void testReplacementZero() throws ArrayException {
-        logger.info("replacementZero test");
+        arrayLogger.info("replacementZero test");
         ArrayReplacementServiceImpl instance = new ArrayReplacementServiceImpl();
         int[] expResult = new int[]{-1, 3, 5, -4, -1, 14, -1};
         instance.replacementZero(testClass);

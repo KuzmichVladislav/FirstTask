@@ -28,3 +28,11 @@
 2021-06-10 13:21:53 INFO  ArrayDeterminationServiceTest:49 - determinationNegative test
 2021-06-10 13:21:53 INFO  ArrayReplacementServiceTest:19 - replacementZero test
 2021-06-10 13:21:53 INFO  ArrayExceptionServiceTest:17 - ArrayException test
+2021-06-10 13:55:23 INFO  ArrayFindServiceTest:31 - findMax test
+2021-06-10 13:55:23 INFO  ArrayFindServiceTest:21 - findMin test
+2021-06-10 13:55:23 INFO  ArrayDeterminationServiceTest:22 - determinationAmount test
+2021-06-10 13:55:23 INFO  ArrayDeterminationServiceTest:40 - determinationPositive test
+2021-06-10 13:55:23 INFO  ArrayDeterminationServiceTest:31 - determinationAverage test
+2021-06-10 13:55:23 INFO  ArrayDeterminationServiceTest:49 - determinationNegative test
+2021-06-10 13:55:23 INFO  ArrayReplacementServiceTest:19 - replacementZero test
+2021-06-10 13:55:23 INFO  ArrayExceptionServiceTest:17 - ArrayException test

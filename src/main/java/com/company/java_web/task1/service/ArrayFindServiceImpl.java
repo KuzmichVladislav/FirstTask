@@ -6,12 +6,12 @@ import org.apache.log4j.Logger;
 
 public class ArrayFindServiceImpl implements ArrayFindService {
 
-    final static Logger logger = Logger.getLogger(ArrayFindServiceImpl.class);
+    final static Logger arrayLogger = Logger.getLogger(ArrayFindServiceImpl.class);
 
     @Override
     public int findMin(CustomArray array) throws ArrayException {
         if (array.isInvalid()) {
-            logger.error("invalid array");
+            arrayLogger.error("invalid array");
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -27,7 +27,7 @@ public class ArrayFindServiceImpl implements ArrayFindService {
     @Override
     public int findMax(CustomArray array) throws ArrayException {
         if (array.isInvalid()) {
-            logger.error("invalid array");
+            arrayLogger.error("invalid array");
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
