@@ -15,7 +15,7 @@ public class ArraySortImpl implements ArraySortService {
     @Override
     public void bubbleSort(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array);
+            logger.error("invalid array" + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -35,7 +35,7 @@ public class ArraySortImpl implements ArraySortService {
     @Override
     public void selectionSort(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array);
+            logger.error("invalid array" + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -56,7 +56,11 @@ public class ArraySortImpl implements ArraySortService {
     }
 
     @Override
-    public void insertionSort(CustomArray array) {
+    public void insertionSort(CustomArray array) throws ArrayException {
+        if (validateArray(array)) {
+            logger.error("invalid array" + array.toString());
+            throw new ArrayException();
+        }
         int[] tempArray = array.getArray();
         for (int i = 1; i < tempArray.length; i++) {
             int current = tempArray[i];

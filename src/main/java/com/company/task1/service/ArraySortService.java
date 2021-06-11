@@ -9,5 +9,5 @@ public interface ArraySortService {
 
     void selectionSort(CustomArray array) throws ArrayException;
 
-    void insertionSort(CustomArray array);
+    void insertionSort(CustomArray array) throws ArrayException;
 }
