@@ -4,9 +4,14 @@ import com.company.task1.entity.CustomArray;
 
 public class ArrayValidator {
 
+    private static final String REGEX_STRING_ARRAY = "([\\d+-]*\\)*\\(*\\s*)+";
+
     public static boolean validateArray(CustomArray array) {
-        int[] tempArray = array.getArray();
-        return tempArray.length < 0;
+        return array.getArray().length < 0;
+    }
+
+    public static boolean validateStringArray(String string) {
+        return string.matches(REGEX_STRING_ARRAY);
     }
 
 }

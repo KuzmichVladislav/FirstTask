@@ -42,7 +42,7 @@ public class ArraySortImpl implements ArraySortService {
         for (int i = 0; i < tempArray.length; i++) {
             int min = tempArray[i];
             int minId = i;
-            for (int j = i+1; j < tempArray.length; j++) {
+            for (int j = i + 1; j < tempArray.length; j++) {
                 if (tempArray[j] < min) {
                     min = tempArray[j];
                     minId = j;
@@ -61,11 +61,11 @@ public class ArraySortImpl implements ArraySortService {
         for (int i = 1; i < tempArray.length; i++) {
             int current = tempArray[i];
             int j = i - 1;
-            while(j >= 0 && current < tempArray[j]) {
-                tempArray[j+1] = tempArray[j];
+            while (j >= 0 && current < tempArray[j]) {
+                tempArray[j + 1] = tempArray[j];
                 j--;
             }
-            tempArray[j+1] = current;
+            tempArray[j + 1] = current;
         }
         array.setArray(tempArray);
     }

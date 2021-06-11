@@ -11,9 +11,7 @@ public class CustomArray {
     }
 
     public int[] getArray() {
-        int[] arrayForGet = new int[array.length];
-        Arrays.copyOf(array, array.length);
-        return arrayForGet;
+        return Arrays.copyOf(array, array.length);
     }
 
     public void setArray(int[] array) {
