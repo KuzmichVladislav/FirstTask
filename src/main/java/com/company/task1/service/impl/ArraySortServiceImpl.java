@@ -1,23 +1,13 @@
 package com.company.task1.service.impl;
 
 import com.company.task1.entity.CustomArray;
-import com.company.task1.exception.ArrayException;
 import com.company.task1.service.ArraySortService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import static com.company.task1.validator.ArrayValidator.validateArray;
 
 public class ArraySortServiceImpl implements ArraySortService {
 
-    static final Logger logger = LogManager.getLogger();
 
     @Override
-    public void bubbleSort(CustomArray array) throws ArrayException {
-        if (validateArray(array)) {
-            logger.error("invalid array " + array.toString());
-            throw new ArrayException();
-        }
+    public void bubbleSort(CustomArray array) {
         int[] tempArray = array.getArray();
         int temp;
         for (int i = 0; i < tempArray.length; i++) {
@@ -33,34 +23,26 @@ public class ArraySortServiceImpl implements ArraySortService {
     }
 
     @Override
-    public void selectionSort(CustomArray array) throws ArrayException {
-        if (validateArray(array)) {
-            logger.error("invalid array " + array.toString());
-            throw new ArrayException();
-        }
+    public void selectionSort(CustomArray array) {
         int[] tempArray = array.getArray();
         for (int i = 0; i < tempArray.length; i++) {
             int min = tempArray[i];
-            int minId = i;
+            int minIndex = i;
             for (int j = i + 1; j < tempArray.length; j++) {
                 if (tempArray[j] < min) {
                     min = tempArray[j];
-                    minId = j;
+                    minIndex = j;
                 }
             }
             int temp = tempArray[i];
             tempArray[i] = min;
-            tempArray[minId] = temp;
+            tempArray[minIndex] = temp;
         }
         array.setArray(tempArray);
     }
 
     @Override
-    public void insertionSort(CustomArray array) throws ArrayException {
-        if (validateArray(array)) {
-            logger.error("invalid array " + array.toString());
-            throw new ArrayException();
-        }
+    public void insertionSort(CustomArray array) {
         int[] tempArray = array.getArray();
         for (int i = 1; i < tempArray.length; i++) {
             int current = tempArray[i];

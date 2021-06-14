@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -17,21 +18,23 @@ public class ArrayReaderImpl implements ArrayReader {
     @Override
     public String stringArray(String path) throws ArrayException {
         String array = "";
+        String line;
         try {
             FileReader file = new FileReader(path);
             BufferedReader reader = new BufferedReader(file);
-            String line = reader.readLine();
-
-            while (line != null) {
+            while (reader.ready()) {
+                line = reader.readLine();
                 if (ArrayValidator.validateStringArray(line)) {
                     array = line;
                     break;
                 }
-                line = reader.readLine();
             }
+        } catch (FileNotFoundException e){
+            logger.error("file was not found " + e);
+            throw new ArrayException(e);
         } catch (IOException e) {
-            logger.error("incorrect file " + e.getMessage());
-            throw new ArrayException(e.getMessage());
+            logger.error("incorrect file " + e);
+            throw new ArrayException(e);
         }
         return array;
     }

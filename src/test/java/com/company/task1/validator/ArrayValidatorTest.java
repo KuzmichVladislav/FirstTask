@@ -1,6 +1,5 @@
 package com.company.task1.validator;
 
-import com.company.task1.entity.CustomArray;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -9,14 +8,6 @@ import static org.junit.Assert.assertTrue;
 public class ArrayValidatorTest {
 
     public ArrayValidatorTest() {
-    }
-
-    @Test
-    public void testValidateArray() {
-        int[] testArray = new int[]{1, 3, 5, -4};
-        CustomArray testClass = new CustomArray(testArray);
-        boolean actual = ArrayValidator.validateArray(testClass);
-        assertFalse(actual);
     }
 
     @Test
