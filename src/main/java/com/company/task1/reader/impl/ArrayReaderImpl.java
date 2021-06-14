@@ -30,7 +30,7 @@ public class ArrayReaderImpl implements ArrayReader {
                 line = reader.readLine();
             }
         } catch (IOException e) {
-            logger.error("file exception " + array);
+            logger.error("incorrect file " + e.getMessage());
             throw new ArrayException(e.getMessage());
         }
         return array;
