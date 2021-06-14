@@ -11,7 +11,6 @@ public class ArrayParserTest {
 
     @Test
     public void testParseString() {
-        System.out.println("parseString");
         String stringArray = "1 0 3 -4 5 6 -7 -8 9 11";
         ArrayParser instance = new ArrayParser();
         int[] expResult = new int[]{1, 0, 3, -4, 5, 6, -7, -8, 9, 11};

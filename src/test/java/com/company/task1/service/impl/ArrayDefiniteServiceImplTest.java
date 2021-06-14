@@ -1,19 +1,17 @@
-package com.company.task1;
+package com.company.task1.service.impl;
 
 import com.company.task1.entity.CustomArray;
 import com.company.task1.exception.ArrayException;
-import com.company.task1.service.impl.ArrayDefiniteServiceImpl;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ArrayDefiniteServiceTest {
-
-    int[] testArray = new int[]{1, 3, 5, -4};
-    CustomArray testClass = new CustomArray(testArray);
+public class ArrayDefiniteServiceImplTest {
 
     @Test
     public void testDeterminationAmount() throws ArrayException {
+        int[] testArray = new int[]{1, 3, 5, -4};
+        CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
         int expResult = 5;
         int actual = instance.definiteAmount(testClass);
@@ -22,6 +20,8 @@ public class ArrayDefiniteServiceTest {
 
     @Test
     public void testDeterminationAverage() throws ArrayException {
+        int[] testArray = new int[]{1, 3, 5, -4};
+        CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
         double expResult = 1.25;
         double actual = instance.definiteAverage(testClass);
@@ -30,6 +30,8 @@ public class ArrayDefiniteServiceTest {
 
     @Test
     public void testDeterminationPositive() throws ArrayException {
+        int[] testArray = new int[]{1, 3, 5, -4};
+        CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
         int expResult = 3;
         int actual = instance.definitePositive(testClass);
@@ -38,6 +40,8 @@ public class ArrayDefiniteServiceTest {
 
     @Test
     public void testDeterminationNegative() throws ArrayException {
+        int[] testArray = new int[]{1, 3, 5, -4};
+        CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
         int expResult = 1;
         int actual = instance.definiteNegative(testClass);

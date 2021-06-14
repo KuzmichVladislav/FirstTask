@@ -15,7 +15,7 @@ public class ArrayDefiniteServiceImpl implements ArrayDefiniteService {
     @Override
     public int definiteAmount(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array.toString());
+            logger.error("invalid array " + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -35,7 +35,7 @@ public class ArrayDefiniteServiceImpl implements ArrayDefiniteService {
     @Override
     public int definitePositive(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array.toString());
+            logger.error("invalid array " + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -51,7 +51,7 @@ public class ArrayDefiniteServiceImpl implements ArrayDefiniteService {
     @Override
     public int definiteNegative(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array.toString());
+            logger.error("invalid array " + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();

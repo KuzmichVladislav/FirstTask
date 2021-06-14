@@ -8,14 +8,14 @@ import org.apache.logging.log4j.Logger;
 
 import static com.company.task1.validator.ArrayValidator.validateArray;
 
-public class ArraySortImpl implements ArraySortService {
+public class ArraySortServiceImpl implements ArraySortService {
 
     static final Logger logger = LogManager.getLogger();
 
     @Override
     public void bubbleSort(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array.toString());
+            logger.error("invalid array " + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -35,7 +35,7 @@ public class ArraySortImpl implements ArraySortService {
     @Override
     public void selectionSort(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array.toString());
+            logger.error("invalid array " + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();
@@ -58,7 +58,7 @@ public class ArraySortImpl implements ArraySortService {
     @Override
     public void insertionSort(CustomArray array) throws ArrayException {
         if (validateArray(array)) {
-            logger.error("invalid array" + array.toString());
+            logger.error("invalid array " + array.toString());
             throw new ArrayException();
         }
         int[] tempArray = array.getArray();

@@ -1,19 +1,17 @@
-package com.company.task1;
+package com.company.task1.service.impl;
 
 import com.company.task1.entity.CustomArray;
 import com.company.task1.exception.ArrayException;
-import com.company.task1.service.impl.ArrayReplacementServiceImpl;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-public class ArrayReplacementServiceTest {
-
-    int[] testArray = new int[]{0, 3, 5, -4, 0, 14, 0};
-    CustomArray testClass = new CustomArray(testArray);
+public class ArrayReplacementServiceImplTest {
 
     @Test
     public void testReplacementZero() throws ArrayException {
+        int[] testArray = new int[]{0, 3, 5, -4, 0, 14, 0};
+        CustomArray testClass = new CustomArray(testArray);
         ArrayReplacementServiceImpl instance = new ArrayReplacementServiceImpl();
         int[] expResult = new int[]{-1, 3, 5, -4, -1, 14, -1};
         instance.replacementZero(testClass);

@@ -1,11 +1,10 @@
-package com.company.task1;
+package com.company.task1.service.impl;
 
 import com.company.task1.entity.CustomArray;
 import com.company.task1.exception.ArrayException;
-import com.company.task1.service.impl.ArrayReplacementServiceImpl;
 import org.junit.Test;
 
-public class ArrayExceptionServiceTest {
+public class ArrayExceptionServiceImplTest {
 
     @Test(expected = Exception.class)
     public void testArrayException() throws ArrayException {
