@@ -7,14 +7,12 @@ import static org.junit.Assert.assertEquals;
 
 public class ArrayReaderImplTest {
 
-    public ArrayReaderImplTest() {
-    }
-
     @Test
     public void testStringArray() throws ArrayException {
+        final String FILE_NAME = "src\\main\\resources\\data\\arrayFile.txt";
         ArrayReaderImpl instance = new ArrayReaderImpl();
         String expResult = "10 -15 83 47 -1 0 3 19 57";
-        String actual = instance.stringArray();
+        String actual = instance.stringArray(FILE_NAME);
         assertEquals(expResult, actual);
     }
 

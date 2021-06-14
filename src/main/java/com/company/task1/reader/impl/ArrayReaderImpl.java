@@ -14,13 +14,11 @@ public class ArrayReaderImpl implements ArrayReader {
 
     static final Logger logger = LogManager.getLogger();
 
-    private static final String FILE_NAME = "src\\main\\resources\\data\\arrayFile.txt";
-
     @Override
-    public String stringArray() throws ArrayException {
+    public String stringArray(String path) throws ArrayException {
         String array = "";
         try {
-            FileReader file = new FileReader(FILE_NAME);
+            FileReader file = new FileReader(path);
             BufferedReader reader = new BufferedReader(file);
             String line = reader.readLine();
 

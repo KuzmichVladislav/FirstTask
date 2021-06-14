@@ -4,5 +4,5 @@ import com.company.task1.exception.ArrayException;
 
 public interface ArrayReader {
 
-    String stringArray() throws ArrayException;
+    String stringArray(String path) throws ArrayException;
 }
