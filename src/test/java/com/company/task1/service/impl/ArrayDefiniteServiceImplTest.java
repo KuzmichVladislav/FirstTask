@@ -1,7 +1,6 @@
 package com.company.task1.service.impl;
 
 import com.company.task1.entity.CustomArray;
-import com.company.task1.exception.ArrayException;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class ArrayDefiniteServiceImplTest {
 
     @Test
-    public void testDeterminationAmount() throws ArrayException {
+    public void testDeterminationAmount() {
         int[] testArray = new int[]{1, 3, 5, -4};
         CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
@@ -19,7 +18,7 @@ public class ArrayDefiniteServiceImplTest {
     }
 
     @Test
-    public void testDeterminationAverage() throws ArrayException {
+    public void testDeterminationAverage() {
         int[] testArray = new int[]{1, 3, 5, -4};
         CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
@@ -29,22 +28,22 @@ public class ArrayDefiniteServiceImplTest {
     }
 
     @Test
-    public void testDeterminationPositive() throws ArrayException {
+    public void testDeterminationPositive() {
         int[] testArray = new int[]{1, 3, 5, -4};
         CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
         int expResult = 3;
-        int actual = instance.definitePositive(testClass);
+        long actual = instance.definitePositive(testClass);
         assertEquals(expResult, actual);
     }
 
     @Test
-    public void testDeterminationNegative() throws ArrayException {
+    public void testDeterminationNegative() {
         int[] testArray = new int[]{1, 3, 5, -4};
         CustomArray testClass = new CustomArray(testArray);
         ArrayDefiniteServiceImpl instance = new ArrayDefiniteServiceImpl();
         int expResult = 1;
-        int actual = instance.definiteNegative(testClass);
+        long actual = instance.definiteNegative(testClass);
         assertEquals(expResult, actual);
     }
 

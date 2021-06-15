@@ -8,7 +8,7 @@ public interface ArrayDefiniteService {
 
     double definiteAverage(CustomArray array);
 
-    int definitePositive(CustomArray array);
+    long definitePositive(CustomArray array);
 
-    int definiteNegative(CustomArray array);
+    long definiteNegative(CustomArray array);
 }

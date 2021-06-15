@@ -3,29 +3,22 @@ package com.company.task1.service.impl;
 import com.company.task1.entity.CustomArray;
 import com.company.task1.service.ArrayFindService;
 
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
 public class ArrayFindServiceImpl implements ArrayFindService {
 
     @Override
     public int findMin(CustomArray array) {
         int[] tempArray = array.getArray();
-        int min = tempArray[0];
-        for (int i : tempArray) {
-            if (i < min) {
-                min = i;
-            }
-        }
-        return min;
+        IntStream stream = IntStream.of(tempArray);
+        return stream.min().getAsInt();
     }
 
     @Override
     public int findMax(CustomArray array) {
         int[] tempArray = array.getArray();
-        int max = tempArray[0];
-        for (int i : tempArray) {
-            if (i > max) {
-                max = i;
-            }
-        }
-        return max;
+        IntStream stream = IntStream.of(tempArray);
+        return stream.max().getAsInt();
     }
 }

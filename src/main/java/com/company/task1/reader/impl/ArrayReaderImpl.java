@@ -6,10 +6,7 @@ import com.company.task1.validator.ArrayValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class ArrayReaderImpl implements ArrayReader {
 
@@ -17,19 +14,23 @@ public class ArrayReaderImpl implements ArrayReader {
 
     @Override
     public String stringArray(String path) throws ArrayException {
-        String array = "";
-        String line;
-        try {
-            FileReader file = new FileReader(path);
-            BufferedReader reader = new BufferedReader(file);
-            while (reader.ready()) {
-                line = reader.readLine();
-                if (ArrayValidator.validateStringArray(line)) {
-                    array = line;
+
+        String array;
+
+        try (InputStream arrayStream = new FileInputStream(path);
+             InputStreamReader arrayStreamReader = new InputStreamReader(arrayStream);
+             BufferedReader reader = new BufferedReader(arrayStreamReader)) {
+
+            while ((array = reader.readLine()) != null) {
+                if (ArrayValidator.validateStringArray(array)) {
                     break;
                 }
             }
-        } catch (FileNotFoundException e){
+            if (array == null) {
+                logger.error("no valid row found");
+                throw new ArrayException("no valid row found");
+            }
+        } catch (FileNotFoundException e) {
             logger.error("file was not found " + e);
             throw new ArrayException(e);
         } catch (IOException e) {

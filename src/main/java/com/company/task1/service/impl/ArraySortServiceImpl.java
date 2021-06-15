@@ -3,8 +3,16 @@ package com.company.task1.service.impl;
 import com.company.task1.entity.CustomArray;
 import com.company.task1.service.ArraySortService;
 
+import java.util.stream.IntStream;
+
 public class ArraySortServiceImpl implements ArraySortService {
 
+    @Override
+    public void intStreamSort(CustomArray array) {
+        int[] tempArray = array.getArray();
+        IntStream stream = IntStream.of(tempArray);
+        array.setArray(stream.sorted().toArray());
+    }
 
     @Override
     public void bubbleSort(CustomArray array) {
