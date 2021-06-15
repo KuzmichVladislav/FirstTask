@@ -6,6 +6,7 @@ import com.company.task1.service.ArrayReplacementService;
 import java.util.stream.IntStream;
 
 public class ArrayReplacementServiceImpl implements ArrayReplacementService {
+
     //replacing zero values with -1
     @Override
     public void replacementZero(CustomArray array) {

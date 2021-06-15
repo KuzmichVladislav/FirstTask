@@ -1,4 +1,9 @@
-C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\java_web\task1\service\TestSuiteService.java
-C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\java_web\task1\service\ArrayDeterminationServiceTest.java
-C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\java_web\task1\service\ArrayFindServiceTest.java
-C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\java_web\task1\service\ArrayReplacementServiceTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\parser\ArrayParserTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\reader\impl\ArrayReaderImplTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\service\impl\ArraySortServiceImplTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\service\impl\ArrayDefiniteServiceImplTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\validator\ArrayValidatorTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\service\impl\ArrayReplacementServiceImplTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\service\impl\ArrayExceptionServiceImplTest.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\service\impl\TestSuiteArrayService.java
+C:\Users\kon\Documents\NetBeansProjects\FirstTask\src\test\java\com\company\task1\service\impl\ArrayFindServiceImplTest.java
