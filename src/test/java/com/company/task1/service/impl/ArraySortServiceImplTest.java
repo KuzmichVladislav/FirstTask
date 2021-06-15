@@ -1,7 +1,6 @@
 package com.company.task1.service.impl;
 
 import com.company.task1.entity.CustomArray;
-import com.company.task1.exception.ArrayException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -31,7 +30,7 @@ public class ArraySortServiceImplTest {
     }
 
     @Test
-    public void testInsertionSort(){
+    public void testInsertionSort() {
         CustomArray array = new CustomArray(new int[]{9, 5, 1, 3, 7, 8, 4, 6, 2, 0});
         ArraySortServiceImpl instance = new ArraySortServiceImpl();
         instance.insertionSort(array);
