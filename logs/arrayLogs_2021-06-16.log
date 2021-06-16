@@ -1,0 +1,1 @@
+[ERROR] 2021-06-16 12:47:56,261 ArrayReaderImpl.stringArray() - file was not found java.io.FileNotFoundException: file:\C:\Users\kon\Documents\NetBeansProjects\FirstTask\target\classes\data\arrayFile.txt (Синтаксическая ошибка в имени файла, имени папки или метке тома)
