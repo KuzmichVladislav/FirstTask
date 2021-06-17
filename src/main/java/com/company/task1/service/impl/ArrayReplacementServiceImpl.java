@@ -12,13 +12,7 @@ public class ArrayReplacementServiceImpl implements ArrayReplacementService {
     public void replacementZero(CustomArray array) {
         int[] tempArray = array.getArray();
         IntStream stream = IntStream.of(tempArray);
-        int[] replacementArray = stream.map(o -> {
-            if (o == 0) {
-                return -1;
-            } else {
-                return o;
-            }
-        }).toArray();
+        int[] replacementArray = stream.map(o -> o == 0 ? -1 : o).toArray();
         array.setArray(replacementArray);
     }
 
