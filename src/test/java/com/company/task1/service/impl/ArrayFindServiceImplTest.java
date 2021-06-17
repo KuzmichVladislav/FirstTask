@@ -1,7 +1,6 @@
 package com.company.task1.service.impl;
 
 import com.company.task1.entity.CustomArray;
-import com.company.task1.exception.ArrayException;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class ArrayFindServiceImplTest {
 
     @Test
-    public void testFindMin() throws ArrayException {
+    public void testFindMin() {
         int[] testArray = new int[]{1, 3, 5, -4};
         CustomArray testClass = new CustomArray(testArray);
         ArrayFindServiceImpl instance = new ArrayFindServiceImpl();
@@ -19,7 +18,7 @@ public class ArrayFindServiceImplTest {
     }
 
     @Test
-    public void testFindMax() throws ArrayException {
+    public void testFindMax() {
         int[] testArray = new int[]{1, 3, 5, -4};
         CustomArray testClass = new CustomArray(testArray);
         ArrayFindServiceImpl instance = new ArrayFindServiceImpl();
