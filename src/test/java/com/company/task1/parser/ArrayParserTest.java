@@ -17,5 +17,4 @@ public class ArrayParserTest {
         int[] actual = instance.parseString(stringArray);
         assertArrayEquals(expResult, actual);
     }
-
 }

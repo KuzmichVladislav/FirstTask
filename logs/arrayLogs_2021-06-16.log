@@ -1,1 +1,0 @@
-[ERROR] 2021-06-16 13:10:10,809 ArrayReaderImpl.stringArray() - file was not found java.io.FileNotFoundException: \data\arrayFile.txt (Системе не удается найти указанный путь)

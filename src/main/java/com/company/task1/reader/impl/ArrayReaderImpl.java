@@ -14,7 +14,6 @@ public class ArrayReaderImpl implements ArrayReader {
 
     @Override
     public String stringArray(String path) throws ArrayException {
-
         String array;
 
         try (InputStream arrayStream = new FileInputStream(path);
